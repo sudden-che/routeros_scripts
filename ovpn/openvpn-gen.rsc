@@ -60,7 +60,7 @@
 
 # enable interface
 :global openvpnport 18000
-
+# может не примениться, лучше проверить и применить руками 
 /interface ovpn-server server
 set enabled=yes
 set port=$openvpnport
