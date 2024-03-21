@@ -51,6 +51,13 @@
 # export to p12
 :for i from=$from to=$fromto do={/certificate export-certificate type=pkcs12 ($cliname.$i) file-name=($cliname.$i) export-passphrase=($pwdmask.$i);}
 
+
+# in bash
+# crt export
+#openssl pkcs12 -in path_to_your_p12_file -nokeys -out cert.crt -passin pass:#yourpass
+# private key export
+#openssl pkcs12 -in path_to_your_p12_file -nocerts -out cert.key -passin pass:#yourpass
+
 # enable interface
 :global openvpnport 18000
 
